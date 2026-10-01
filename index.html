@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Elham Daneshmand</title>
+  <meta name="description" content="Elham Daneshmand, PhD candidate at McGill University and Mila, working on post-training robot policies, sim-to-real transfer and humanoid whole-body control.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://lhumd.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Elham Daneshmand">
+  <meta property="og:description" content="Elham Daneshmand, PhD candidate at McGill University and Mila, working on post-training robot policies, sim-to-real transfer and humanoid whole-body control.">
+  <meta property="og:url" content="https://lhumd.github.io/">
+  <meta property="og:image" content="https://lhumd.github.io/assets/img/elham.jpg">
+  <meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="topnav" aria-label="Sections">
+    <a href="#about">About</a>
+    <a href="#news">News</a>
+    <a href="#publications">Publications</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="cv.html">CV</a>
+  </nav>
+
+  <main>
+    <header id="about" class="hero">
+      <img class="portrait" src="assets/img/elham.jpg" alt="Portrait of Elham Daneshmand" width="200" height="200">
+      <div class="hero-text">
+        <h1>Elham Daneshmand</h1>
+        <p class="role">PhD candidate, McGill University &amp; Mila · Montreal, Canada</p>
+        <p class="links">
+          <a href="mailto:elham.daneshmand@mila.quebec">Email</a>
+          <a href="cv.html">CV</a>
+          <a href="https://scholar.google.com/citations?user=Lu-jto0AAAAJ">Google Scholar</a>
+          <a href="https://github.com/Lhumd">GitHub</a>
+          <a href="https://www.linkedin.com/in/elham-daneshmand">LinkedIn</a>
+        </p>
+        <p>I am a final-year PhD candidate in Computer Science at McGill University and Mila (GPA 4.00), advised by <a href="https://neo-x.github.io/">Glen Berseth</a> and <a href="https://sites.google.com/site/hsiuchinlin/">Hsiu-Chin Lin</a>.</p>
+        <p>My research is on <strong>post-training</strong>: teaching a pretrained model a new skill or a new setting without losing what it already knows. I study it on robot policies, where forgetting and unsafe exploration have physical costs. I began with model predictive control for bipeds, then safe reinforcement learning and on-robot fine-tuning for quadrupeds. More recently, I have turned to post-training methods from large language models, such as low-rank adaptation, KL-regularized fine-tuning and GRPO, and my current work is on policies up to a 7B vision-language-action model. The same questions drive LLM post-training: what to update, how far to move from the base model, and how to add a capability without losing the others.</p>
+        <p>My work spans humanoid whole-body tracking and loco-manipulation on the Unitree G1, and safe fine-tuning on a physical Unitree Go2 as a visiting researcher at the Technical University of Munich, supported by <a href="https://www.ce.cit.tum.de/en/aipd/members/majid-khadiv/">Majid Khadiv</a>. Before my PhD, I completed a B.Sc. in Computer Science at Amirkabir University of Technology and worked on model predictive control for torque-controlled bipeds at the Max Planck Institute for Intelligent Systems, in the group of <a href="https://engineering.nyu.edu/faculty/ludovic-righetti">Ludovic Righetti</a> (NYU).</p>
+        <p>McGill undergraduates interested in a robot-learning project are welcome to email me with a short note on their interests.</p>
+        <p class="note">I am open to research internships in 2027.</p>
+        <ul class="tags" aria-label="Research areas">
+          <li>post-training</li>
+          <li>sim-to-real transfer</li>
+          <li>RL post-training</li>
+          <li>humanoid whole-body control</li>
+          <li>safe reinforcement learning</li>
+          <li>parameter-efficient fine-tuning (LoRA)</li>
+        </ul>
+      </div>
+    </header>
+
+    <section id="robots" class="reel" aria-label="Real-robot videos">
+      <a class="tile" href="#slowrl">
+        <video src="assets/video/slowrl_go2_jump.mp4" poster="assets/img/slowrl_go2_jump_poster.jpg" muted loop playsinline autoplay aria-hidden="true"></video>
+        <span>Fine-tuning on a real Unitree Go2</span>
+      </a>
+      <a class="tile" href="#mpc">
+        <video src="assets/video/bolt_push_recovery.mp4" poster="assets/img/bolt_push_recovery_poster.jpg" muted loop playsinline autoplay aria-hidden="true"></video>
+        <span>Push recovery on the biped Bolt</span>
+      </a>
+      <a class="tile" href="#mpc">
+        <video src="assets/video/bolt_uneven_ground.mp4" poster="assets/img/bolt_uneven_ground_poster.jpg" muted loop playsinline autoplay aria-hidden="true"></video>
+        <span>Uneven ground on the biped Bolt</span>
+      </a>
+    </section>
+
+    <section id="news">
+      <h2>News</h2>
+      <ul class="news">
+        <li><span class="date">Sep 2026</span> <span><a href="#safeexplorer"><strong>SafeExplorer</strong></a> was accepted at <em>Transactions on Machine Learning Research</em> (TMLR).</span></li>
+        <li><span class="date">Sep 2026</span> <span><a href="#koala"><strong>Koala Science: A Platform for AI Reviewers in the Wild</strong></a>, the paper on the platform that ran the ICML 2026 Agent Review Competition, was accepted at the NeurIPS 2026 Workshop on AI-Native Academia. I co-authored it as one of the five top-ranked participants who helped test the platform.</span></li>
+        <li><span class="date">Aug 2026</span> <span><a href="#slowrl"><strong>SLowRL</strong></a> was presented as a workshop poster at RLC 2026 in Montreal.</span></li>
+        <li><span class="date">Jun 2026</span> <span>My reviewing agent placed <a href="#koala">5th in Koala Science's ICML 2026 Agent Review Competition</a>, an internal competition held at Mila.</span></li>
+        <li><span class="date">May 2026</span> <span>Received the <a href="cv.html#wai">Women in AI Excellence Scholarship</a> from Mila.</span></li>
+        <li><span class="date">May 2026</span> <span>Presented our lab's robots and my research to <a href="cv.html#whiterose">Polytechnique Montréal's Order of the White Rose</a> on their visit to Mila.</span></li>
+        <li><span class="date">Jan 2026</span> <span>Judged at <a href="cv.html#mchacks">McHacks 2026</a>, McGill's annual hackathon.</span></li>
+        <li><span class="date">Jun – Nov 2025</span> <span><a href="#tum">Visiting researcher</a> at the Technical University of Munich.</span></li>
+      </ul>
+    </section>
+
+    <section id="publications">
+      <h2>Publications</h2>
+
+      <article class="paper" id="finetuning">
+        <figure class="media">
+          <img width="640" height="430" src="assets/img/finetuning_setting.jpg" alt="Simulated Unitree G1 humanoid tracking a reference motion" loading="lazy">
+          <figcaption>Simulated Unitree G1 motion tracking with the pretrained policy, one of the study's settings.</figcaption>
+        </figure>
+        <div class="body">
+          <h3>Fine-Tuning Methods for Post-Training Robot Policies</h3>
+          <p class="authors"><strong>E. Daneshmand</strong> et al.</p>
+          <p class="venue">In preparation</p>
+          <p class="teaser">When a pretrained policy has to learn something new, which fine-tuning method keeps what it already knows? A head-to-head comparison, from humanoid motion tracking to a 7B vision-language-action model.</p>
+          <div class="plinks">
+            <button type="button" class="pill" aria-expanded="false" aria-controls="finetuning-details">Details</button>
+          </div>
+          <div class="drawer" id="finetuning-details" hidden="until-found"><p>How does the choice of fine-tuning method trade off keeping a pretrained policy's behaviour against adapting to a new objective? The study compares LoRA, KL-anchored LoRA, a bounded residual and full fine-tuning across humanoid locomotion and loco-manipulation, NVIDIA's SONIC foundation motion tracker, and OpenVLA-OFT, a 7B vision-language-action model post-trained with GRPO on LIBERO.</p></div>
+        </div>
+      </article>
+
+      <article class="paper" id="safeexplorer">
+        <figure class="media">
+          <video src="assets/video/safeexplorer_region.mp4" poster="assets/img/safeexplorer_region_poster.jpg" muted loop playsinline autoplay controls aria-label="Animation of a safe region growing during training"></video>
+          <figcaption>Illustration: the safe region grows during training on a curriculum; outside it, a recovery controller acts.</figcaption>
+        </figure>
+        <div class="body">
+          <h3>SafeExplorer: An Unbiased Mixed-Policy Gradient for Reinforcement Learning with Recovery Interventions</h3>
+          <p class="authors"><strong>E. Daneshmand</strong>, M. Khadiv, G. Berseth, H.-C. Lin</p>
+          <p class="venue">Transactions on Machine Learning Research (TMLR), 2026 (accepted)</p>
+          <p class="teaser">Keeping a robot safe while it learns means letting a recovery controller take over, and that quietly biases every policy-gradient update. SafeExplorer removes the bias while keeping the safety net.</p>
+          <div class="plinks">
+            <a href="https://openreview.net/forum?id=ppOrbSsMM0">Paper</a>
+            <button type="button" class="pill" aria-expanded="false" aria-controls="safeexplorer-details">Details</button>
+            <button type="button" class="pill" aria-expanded="false" aria-controls="safeexplorer-bib">BibTeX</button>
+          </div>
+          <div class="drawer" id="safeexplorer-details" hidden="until-found"><p>Interleaving a learned policy with a recovery controller biases every on-policy update, and the importance-sampling correction is undefined whenever that controller is deterministic. SafeExplorer is a drop-in PPO modification that remains unbiased in that case. In simulation (HalfCheetah, Ant, Unitree Go1; ten seeds) it had 21 to 255 times fewer training-time falls than PPO while matching its final reward.</p></div>
+          <div class="drawer bib" id="safeexplorer-bib" hidden><pre>@article{daneshmand2026safeexplorer,
+  title   = {SafeExplorer: An Unbiased Mixed-Policy Gradient for Reinforcement Learning with Recovery Interventions},
+  author  = {Daneshmand, Elham and Khadiv, Majid and Berseth, Glen and Lin, Hsiu-Chin},
+  journal = {Transactions on Machine Learning Research},
+  issn    = {2835-8856},
+  year    = {2026},
+  url     = {https://openreview.net/forum?id=ppOrbSsMM0}
+}</pre><button type="button" class="copy">Copy</button></div>
+        </div>
+      </article>
+
+      <article class="paper" id="slowrl">
+        <figure class="media">
+          <video src="assets/video/slowrl_go2_jump.mp4" poster="assets/img/slowrl_go2_jump_poster.jpg" muted loop playsinline autoplay controls aria-label="Physical Unitree Go2 jumping: pre-trained policy, on-robot fine-tuning sped up, then the fine-tuned policy"></video>
+          <figcaption>Physical Unitree Go2 jump: the pre-trained policy, on-robot fine-tuning (sped up), then the fine-tuned policy.</figcaption>
+        </figure>
+        <div class="body">
+          <h3>SLowRL: Safe Low-Rank Adaptation Reinforcement Learning for Locomotion</h3>
+          <p class="authors"><strong>E. Daneshmand</strong>, S. Omar, G. Berseth, M. Khadiv, H.-C. Lin</p>
+          <p class="venue">Under review, IEEE-RAS Humanoids 2026 · Workshop poster, RLC 2026</p>
+          <p class="teaser">Can a policy trained in simulation be fine-tuned on the real robot, safely, by adapting only a low-rank slice of its weights? SLowRL brings LoRA, the adapter behind efficient LLM fine-tuning, to on-robot reinforcement learning.</p>
+          <div class="plinks">
+            <a href="https://arxiv.org/abs/2603.17092">Paper</a>
+            <button type="button" class="pill" aria-expanded="false" aria-controls="slowrl-details">Details</button>
+            <button type="button" class="pill" aria-expanded="false" aria-controls="slowrl-bib">BibTeX</button>
+          </div>
+          <div class="drawer" id="slowrl-details" hidden="until-found"><p>Fine-tunes simulation-trained locomotion policies safely by combining low-rank adaptation (LoRA) with a recovery policy that takes over near unsafe states. In sim-to-sim transfer from Isaac Lab to MuJoCo on jump and trot, it cut fine-tuning time by 46.5% on average relative to full fine-tuning, with near-zero safety violations, and it was validated by fine-tuning a jump policy on a physical Unitree Go2.</p></div>
+          <div class="drawer bib" id="slowrl-bib" hidden><pre>@misc{daneshmand2026slowrl,
+  title         = {SLowRL: Safe Low-Rank Adaptation Reinforcement Learning for Locomotion},
+  author        = {Daneshmand, Elham and Omar, Shafeef and Berseth, Glen and Khadiv, Majid and Lin, Hsiu-Chin},
+  year          = {2026},
+  eprint        = {2603.17092},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  url           = {https://arxiv.org/abs/2603.17092}
+}</pre><button type="button" class="copy">Copy</button></div>
+        </div>
+      </article>
+
+      <article class="paper" id="mpc">
+        <figure class="media">
+          <img width="341" height="240" src="assets/img/mpc.jpg" alt="The Bolt biped walking on uneven ground" loading="lazy">
+          <figcaption>The real biped Bolt on uneven ground.</figcaption>
+        </figure>
+        <div class="body">
+          <h3>Variable Horizon MPC with Swing Foot Dynamics for Bipedal Walking Control</h3>
+          <p class="authors"><strong>E. Daneshmand</strong>, M. Khadiv, F. Grimminger, L. Righetti</p>
+          <p class="venue">IEEE Robotics and Automation Letters (RA-L), 2021 · presented at ICRA 2021</p>
+          <p class="press">Robot video featured in <a href="https://spectrum.ieee.org/video-friday-agility-robotics-robot-production#:~:text=This%20video%20shows%20a%20set%20of%20new%20tests%20we%20performed%20on%20Bolt">IEEE Spectrum Video Friday</a>, October 2020</p>
+          <p class="teaser">Where and when should a biped put its next foot after a push? A two-level MPC decides both, and keeps the real biped Bolt on its feet.</p>
+          <div class="plinks">
+            <a href="https://arxiv.org/abs/2010.08198">Paper</a>
+            <a href="https://github.com/machines-in-motion/reactive_planners">Code</a>
+            <a href="https://www.youtube.com/watch?v=x2jYQdjT_es">Video</a>
+            <button type="button" class="pill" aria-expanded="false" aria-controls="mpc-details">Details</button>
+            <button type="button" class="pill" aria-expanded="false" aria-controls="mpc-bib">BibTeX</button>
+          </div>
+          <div class="drawer" id="mpc-details" hidden="until-found"><p>Two-level model predictive control: the upper level chooses swing-foot landing location and timing from centre-of-mass feedback, and the lower level generates dynamically consistent swing-foot trajectories under joint-torque and friction-cone limits. Robust walking under disturbances on the real biped Bolt.</p></div>
+          <div class="drawer bib" id="mpc-bib" hidden><pre>@article{daneshmand2021variable,
+  title   = {Variable Horizon {MPC} With Swing Foot Dynamics for Bipedal Walking Control},
+  author  = {Daneshmand, Elham and Khadiv, Majid and Grimminger, Felix and Righetti, Ludovic},
+  journal = {IEEE Robotics and Automation Letters},
+  volume  = {6},
+  number  = {2},
+  pages   = {2349--2356},
+  year    = {2021},
+  doi     = {10.1109/LRA.2021.3061381}
+}</pre><button type="button" class="copy">Copy</button></div>
+        </div>
+      </article>
+
+      <article class="paper" id="icar">
+        <figure class="media">
+          <img width="512" height="184" src="assets/img/icar.jpg" alt="Simulation snapshots of the Bolt biped walking and running" loading="lazy">
+          <figcaption>Walking and running gaits for Bolt (simulation).</figcaption>
+        </figure>
+        <div class="body">
+          <h3>A Unified Framework for Walking and Running of Bipedal Robots</h3>
+          <p class="authors">M. Ghoddousi Boroujeni*, <strong>E. Daneshmand</strong>*, L. Righetti, M. Khadiv (*equal contribution)</p>
+          <p class="venue">International Conference on Advanced Robotics (ICAR), 2021</p>
+          <p class="teaser">Walking and running usually need different models. Relaxing one assumption of the classic pendulum model, a fixed centre-of-mass height, lets one framework generate both.</p>
+          <div class="plinks">
+            <a href="https://arxiv.org/abs/2110.09172">Paper</a>
+            <button type="button" class="pill" aria-expanded="false" aria-controls="icar-details">Details</button>
+            <button type="button" class="pill" aria-expanded="false" aria-controls="icar-bib">BibTeX</button>
+          </div>
+          <div class="drawer" id="icar-details" hidden="until-found"><p>Generates walking and running gaits by relaxing the fixed centre-of-mass height of the linear inverted pendulum with virtual constraints in centroidal space; a quadratic program adapts step location and timing under disturbances. Validated in simulation on the biped Bolt.</p></div>
+          <div class="drawer bib" id="icar-bib" hidden><pre>@inproceedings{boroujeni2021unified,
+  title     = {A Unified Framework for Walking and Running of Bipedal Robots},
+  author    = {Ghoddousi Boroujeni, Mahrokh and Daneshmand, Elham and Righetti, Ludovic and Khadiv, Majid},
+  booktitle = {2021 20th International Conference on Advanced Robotics (ICAR)},
+  pages     = {396--403},
+  year      = {2021},
+  doi       = {10.1109/ICAR53236.2021.9659392}
+}</pre><button type="button" class="copy">Copy</button></div>
+        </div>
+      </article>
+
+      <article class="paper" id="koala">
+        <figure class="media">
+          <img width="559" height="139" src="assets/img/koala.jpg" alt="Koala Science logo" loading="lazy">
+        </figure>
+        <div class="body">
+          <h3>Koala Science: A Platform for AI Reviewers in the Wild</h3>
+          <p class="authors">The Koala Science team and five top-ranked competition participants, including <strong>E. Daneshmand</strong></p>
+          <p class="venue">NeurIPS 2026 Workshop on AI-Native Academia (accepted)</p>
+          <p class="teaser">Can AI agents review papers? This platform ran reviewing agents on real ICML 2026 submissions and scored their verdicts against the actual decisions. I co-authored it as one of the five top-ranked competition participants who helped test the platform.</p>
+          <div class="plinks">
+            <a href="https://openreview.net/forum?id=VHwD1T5NwI">Paper</a>
+            <button type="button" class="pill" aria-expanded="false" aria-controls="koala-details">Details</button>
+          </div>
+          <div class="drawer" id="koala-details" hidden="until-found"><p>My reviewing agent placed 5th in the ICML 2026 Agent Review Competition, an internal competition held at Mila whose leaderboard ranked agents by how well their verdicts tracked the real ICML 2026 accept and reject decisions. The five top-ranked participants helped test the platform and joined its paper as co-authors.</p></div>
+        </div>
+      </article>
+    </section>
+
+
+    <section id="projects">
+      <h2>Other projects</h2>
+      <ul class="projects">
+        <li>
+          <h3>Hierarchical language-model-guided agent in Crafter</h3>
+          <p class="venue">Independent project, 2026 (in progress)</p>
+          <p>A hierarchical agent for the open-ended survival game Crafter: a high-level policy distilled from a language-model teacher chooses goals, and low-level skills learned from human play are fine-tuned with reinforcement learning.</p>
+        </li>
+        <li>
+          <h3>LLM reviewing agents</h3>
+          <p class="venue">ICML 2026 Agent Review Competition, Koala Science · 5th place</p>
+          <p>Language-model agents that review research papers; the competition leaderboard scored how well each agent's verdicts tracked the real ICML 2026 accept and reject decisions. The platform behind the competition is described in the <a href="#koala">Koala Science paper</a> above.</p>
+        </li>
+        <li>
+          <h3>LLM Duckiebot</h3>
+          <p class="venue">Course project with <a href="https://liampaull.ca/">Liam Paull</a>, 2024</p>
+          <p>Using large language models to drive a Duckiebot from camera input, and to command quadruped locomotion in natural language.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <ul class="timeline">
+        <li id="tum"><span class="date">Jun – Nov 2025</span> <span><strong>Visiting Researcher</strong>, Technical University of Munich, Germany, supported by Majid Khadiv.<br>Proposed SLowRL and fine-tuned a jumping policy on a physical Unitree Go2; developed SafeExplorer.</span></li>
+        <li><span class="date">2019 – 2021</span> <span><strong>Robotics Researcher and Research Intern</strong>, Max Planck Institute for Intelligent Systems, Tübingen, Germany.<br>Developed impedance and centroidal controllers for a torque-controlled biped, deployed variable-horizon MPC on the real biped Bolt (<a href="https://github.com/machines-in-motion/reactive_planners">code</a>), and contributed to actuator model identification for a one-legged robot.</span></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Elham Daneshmand · Last updated September 2026</p>
+  </footer>
+
+  <script>
+    const offscreen = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) e.target.play(); else e.target.pause(); }));
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.querySelectorAll('video[autoplay]').forEach(v => { v.removeAttribute('autoplay'); v.pause(); v.controls = true; });
+    } else {
+      document.querySelectorAll('video[autoplay]').forEach(v => offscreen.observe(v));
+    }
+    document.querySelectorAll('.plinks button[aria-controls]').forEach(button => {
+      const drawer = document.getElementById(button.getAttribute('aria-controls'));
+      const closedState = drawer.getAttribute('hidden');
+      button.addEventListener('click', () => {
+        const open = button.getAttribute('aria-expanded') === 'true';
+        button.setAttribute('aria-expanded', String(!open));
+        if (open) drawer.setAttribute('hidden', closedState); else drawer.removeAttribute('hidden');
+      });
+      drawer.addEventListener('beforematch', () => button.setAttribute('aria-expanded', 'true'));
+    });
+    document.querySelectorAll('.bib .copy').forEach(button => {
+      button.addEventListener('click', () => {
+        navigator.clipboard.writeText(button.previousElementSibling.textContent).then(() => {
+          button.textContent = 'Copied';
+          setTimeout(() => { button.textContent = 'Copy'; }, 1500);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
