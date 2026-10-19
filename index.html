@@ -112,6 +112,7 @@
     <section id="news">
       <h2>News</h2>
       <ul class="news">
+        <li><span class="date">Oct 2026</span> <span><a href="#safeexplorer"><strong>SafeExplorer</strong></a> is published in <em>Transactions on Machine Learning Research</em> (TMLR). See the <a href="https://lhumd.github.io/safeexplorer/">project page</a> for the paper, results and rollout videos.</span></li>
         <li><span class="date">Sep 2026</span> <span><a href="#safeexplorer"><strong>SafeExplorer</strong></a> was accepted at <em>Transactions on Machine Learning Research</em> (TMLR).</span></li>
         <li><span class="date">Sep 2026</span> <span><a href="#koala"><strong>Koala Science: A Platform for AI Reviewers in the Wild</strong></a>, the paper on the platform that ran the ICML 2026 Agent Review Competition, was accepted at the NeurIPS 2026 Workshop on AI-Native Academia. I co-authored it as one of the five top-ranked participants who helped test the platform.</span></li>
         <li><span class="date">Aug 2026</span> <span><a href="#slowrl"><strong>SLowRL</strong></a> was presented as a workshop poster at RLC 2026 in Montreal.</span></li>
@@ -151,14 +152,16 @@
         <div class="body">
           <h3>SafeExplorer: An Unbiased Mixed-Policy Gradient for Reinforcement Learning with Recovery Interventions</h3>
           <p class="authors"><strong>E. Daneshmand</strong>, M. Khadiv, G. Berseth, H.-C. Lin</p>
-          <p class="venue">Transactions on Machine Learning Research (TMLR), 2026 (accepted)</p>
+          <p class="venue">Transactions on Machine Learning Research (TMLR), 2026</p>
           <p class="teaser">Keeping a robot safe while it learns means letting a recovery controller take over, and that quietly biases every policy-gradient update. SafeExplorer removes the bias while keeping the safety net.</p>
           <div class="plinks">
             <a href="https://openreview.net/forum?id=ppOrbSsMM0">Paper</a>
+            <a href="https://arxiv.org/abs/2607.08925">arXiv</a>
+            <a href="https://lhumd.github.io/safeexplorer/">Project page</a>
             <button type="button" class="pill" aria-expanded="false" aria-controls="safeexplorer-details">Details</button>
             <button type="button" class="pill" aria-expanded="false" aria-controls="safeexplorer-bib">BibTeX</button>
           </div>
-          <div class="drawer" id="safeexplorer-details" hidden="until-found"><p>Interleaving a learned policy with a recovery controller biases every on-policy update, and the importance-sampling correction is undefined whenever that controller is deterministic. SafeExplorer is a drop-in PPO modification that remains unbiased in that case. In simulation (HalfCheetah, Ant, Unitree Go1; ten seeds) it had 21 to 255 times fewer training-time falls than PPO while matching its final reward.</p></div>
+          <div class="drawer" id="safeexplorer-details" hidden="until-found"><p>Interleaving a learned policy with a recovery controller biases every on-policy update, and the importance-sampling correction is undefined whenever that controller is deterministic. SafeExplorer is a drop-in PPO modification whose policy-gradient estimator stays unbiased for the mixed-policy return in that case. In simulation (HalfCheetah, Ant, Unitree Go1; ten seeds) it had 21 to 255 times fewer training-time falls than PPO while matching or exceeding its final reward.</p></div>
           <div class="drawer bib" id="safeexplorer-bib" hidden><pre>@article{daneshmand2026safeexplorer,
   title   = {SafeExplorer: An Unbiased Mixed-Policy Gradient for Reinforcement Learning with Recovery Interventions},
   author  = {Daneshmand, Elham and Khadiv, Majid and Berseth, Glen and Lin, Hsiu-Chin},
