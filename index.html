@@ -112,6 +112,7 @@
     <section id="news">
       <h2>News</h2>
       <ul class="news">
+        <li><span class="date">Oct 2026</span> <span><a href="#diplo"><strong>DiPLO</strong></a> is out on arXiv: a self-distilled diffusion planner for humanoid loco-manipulation that runs on a real Unitree G1 with no real-world fine-tuning. See the <a href="https://atarilab.github.io/diplo-website/">project page</a> for the film and real-robot videos.</span></li>
         <li><span class="date">Oct 2026</span> <span><a href="#safeexplorer"><strong>SafeExplorer</strong></a> is published in <em>Transactions on Machine Learning Research</em> (TMLR). See the <a href="https://lhumd.github.io/safeexplorer/">project page</a> for the paper, results and rollout videos.</span></li>
         <li><span class="date">Sep 2026</span> <span><a href="#safeexplorer"><strong>SafeExplorer</strong></a> was accepted at <em>Transactions on Machine Learning Research</em> (TMLR).</span></li>
         <li><span class="date">Sep 2026</span> <span><a href="#koala"><strong>Koala Science: A Platform for AI Reviewers in the Wild</strong></a>, the paper on the platform that ran the ICML 2026 Agent Review Competition, was accepted at the NeurIPS 2026 Workshop on AI-Native Academia. I co-authored it as one of the five top-ranked participants who helped test the platform.</span></li>
@@ -126,6 +127,37 @@
 
     <section id="publications">
       <h2>Publications</h2>
+
+      <article class="paper" id="diplo">
+        <figure class="media">
+          <video width="640" height="360" src="assets/video/diplo_g1_sim_real.mp4" poster="assets/img/diplo_g1_sim_real_poster.jpg" muted loop playsinline autoplay controls aria-label="Unitree G1 picking up and carrying a box, in simulation and on the real robot side by side"></video>
+          <figcaption>The same motion in simulation (left, the planner's plan drawn as a cyan hologram) and on the real Unitree G1 (right).</figcaption>
+        </figure>
+        <div class="body">
+          <h3>DiPLO: Self-distilled Diffusion Planning for Loco-manipulation</h3>
+          <p class="authors">S. Omar, S. Sanokowski, <strong>E. Daneshmand</strong>, D. Yu, D. Cremers, C. Schmid, M. Khadiv</p>
+          <p class="venue">Preprint, arXiv 2026</p>
+          <p class="teaser">How little human motion does a humanoid need to pick up, carry and place a box? A diffusion planner, post-trained twice (first distilling away its need for a reference motion, then with RL), plans from the robot's state history and goal alone, and a whole-body tracker runs it on a real Unitree G1.</p>
+          <div class="plinks">
+            <a href="https://arxiv.org/abs/2610.24847">Paper</a>
+            <a href="https://atarilab.github.io/diplo-website/">Project page</a>
+            <a href="https://www.youtube.com/watch?v=rDrdnYQUYoM">Video</a>
+            <button type="button" class="pill" aria-expanded="false" aria-controls="diplo-details">Details</button>
+            <button type="button" class="pill" aria-expanded="false" aria-controls="diplo-bib">BibTeX</button>
+          </div>
+          <div class="drawer" id="diplo-details" hidden="until-found"><p>A diffusion planner generates whole-body robot and object motion, and a single tracking policy trained with RL executes it. The planner is pretrained on 2.7 minutes of retargeted human motion, expanded with sampling-based trajectory optimisation and symmetry augmentation. Self-Distillation Diffusion Policy Optimisation (SD:DPO) then removes its dependence on the retargeted reference motion, and Diffusion-Augmented PPO (DA:PPO), a maximum-entropy RL method for diffusion models, fine-tunes it against the frozen tracker. Task success on pick-carry-place rises from 45% for the pretrained planner to 99%, with state-history and goal conditioning only. The planner also reaches unseen goals, and the same recipe, with a planner trained per task, works for kicking and for pushing or pulling. The pipeline runs on a real Unitree G1 without real-world fine-tuning, with robot and object poses from motion capture. I trained some of the diffusion planner models and worked on tracker fine-tuning, the alternative that the paper compares DA:PPO planner fine-tuning against.</p></div>
+          <div class="drawer bib" id="diplo-bib" hidden><pre>@misc{omar2026diplo,
+  title         = {{DiPLO}: Self-distilled Diffusion Planning for Loco-manipulation},
+  author        = {Omar, Shafeef and Sanokowski, Sebastian and Daneshmand, Elham and
+                   Yu, Dian and Cremers, Daniel and Schmid, Cordelia and Khadiv, Majid},
+  year          = {2026},
+  eprint        = {2610.24847},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  url           = {https://arxiv.org/abs/2610.24847}
+}</pre><button type="button" class="copy">Copy</button></div>
+        </div>
+      </article>
 
       <article class="paper" id="finetuning">
         <figure class="media">
@@ -312,7 +344,7 @@
   </main>
 
   <footer>
-    <p>© 2026 Elham Daneshmand · Last updated September 2026</p>
+    <p>© 2026 Elham Daneshmand · Last updated October 2026</p>
   </footer>
 
   <script>
